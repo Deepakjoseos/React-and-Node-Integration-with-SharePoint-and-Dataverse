@@ -1,0 +1,62 @@
+# Node.js Backend for React and SharePoint Integration
+
+This repository hosts the Node.js backend for a web application that integrates a React frontend with SharePoint and Dataverse. The project aims to provide a robust solution for managing and interacting with organizational data through a modern, responsive interface.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+This Node.js backend provides the server-side logic for a web application that uses React for the frontend and integrates with SharePoint as the primary data source. It handles API requests, data processing, authentication, and communication with SharePoint and Dataverse.
+
+## Features
+
+- **Fetch SharePoint Data:** Retrieve document locations,metadata and files from SharePoint.
+- **Upload Files to SharePoint:** Seamlessly upload files to SharePoint document libraries and update metadata.
+- **Download Files from SharePoint:** Allow users to download files stored in SharePoint directly from the application.
+- **Update Document Metadata:** Update document types and other metadata in SharePoint.
+- **Delete Files:** Remove files from SharePoint.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- Node.js (v12.x or later) and npm installed on your machine.
+- Access to a SharePoint site and the necessary credentials.
+- A Dataverse instance and the necessary API credentials.
+- A `.env` file with the required environment variables (see Configuration).
+
+## Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Deepakjoseos/React-and-Node-Integration-with-SharePoint-and-Dataverse.git
+    cd React-and-Node-Integration-with-SharePoint-and-Dataverse/backend
+    ```
+
+2. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+## Configuration
+
+Create a `.env` file in the root of your project and add the following environment variables:
+
+```plaintext
+SP_Username=your-sharepoint-username
+SP_Password=your-sharepoint-password
+SharePointURL=your-sharepoint-url
+DataverseURL=your-dataverse-url
+DATAVERSE_CLIENT_ID=your-dataverse-client-id
+DATAVERSE_CLIENT_SECRET=your-dataverse-client-secret
+DATAVERSE_TENANT_ID=your-dataverse-tenant-id
