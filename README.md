@@ -50,7 +50,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Configuration
 
-Create a `.env` file in the root of your project and add the following environment variables:
+Create a `.env` file in the root of your project and add your own following environment variables:
 
 ```plaintext
 SP_Username=your-sharepoint-username
@@ -60,3 +60,59 @@ DataverseURL=your-dataverse-url
 DATAVERSE_CLIENT_ID=your-dataverse-client-id
 DATAVERSE_CLIENT_SECRET=your-dataverse-client-secret
 DATAVERSE_TENANT_ID=your-dataverse-tenant-id
+```
+
+## Usage
+
+1. Start the Node.js server:
+```bash
+npm start
+```
+2. The server will run on http://localhost:5000 (or another port if configured).
+
+## API Endpoints
+
+Get SharePoint Document Locations
+URL: /api/sharepoint/documents/:name
+Method: GET
+Description: Fetches document locations from SharePoint based on the provided name.
+
+Upload File to SharePoint
+URL: /api/sharepoint/upload
+Method: POST
+Description: Uploads a file to SharePoint and updates its metadata.
+
+Download File from SharePoint
+URL: /api/sharepoint/download
+Method: GET
+Description: Downloads a file from SharePoint based on the provided server relative URL.
+Query Parameters: serverRelativeUrl: The server relative URL of the file to download.
+
+
+Update Document Metadata
+URL: /api/sharepoint/update
+Method: POST
+Description: Updates the metadata of a document in SharePoint.
+
+Delete File from SharePoint
+URL: /api/sharepoint/delete
+Method: DELETE
+Description: Deletes a file from SharePoint based on the provided server relative URL.
+Query Parameters:
+serverRelativeUrl: The server relative URL of the file to delete.
+fileName: The name of the file to delete.
+
+## Troubleshooting
+
+If you encounter issues, consider the following steps:
+
+Ensure your .env file contains the correct credentials and URLs.
+Check the console for error messages and stack traces.
+Verify that you have the necessary permissions to access and modify data in SharePoint and Dataverse.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request to propose changes.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
